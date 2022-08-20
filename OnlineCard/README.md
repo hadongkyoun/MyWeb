@@ -6,4 +6,4 @@
 ### ***VIEW MORE*** is introuce more member's information ( ex. github )
 ### Also this is offer their ***instagram or facebook*** link and ***mail***
 ## Footer
-<h2>You can see the four Circle below website.<br>When you want to watch other member click other circles.</h2>
+<h3>You can see the four Circle below website.<br>When you want to watch other member click other circles.</h3>
