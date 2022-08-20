@@ -1,0 +1,176 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #b1e1e2;
+	animation: sky linear 20s infinite;
+}
+
+h1{
+	width: 1000px;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, 150%);
+	font: 92px/1 "Poiret one";
+	color: #fff;
+	text-align: center;
+	animation: day linear 2s infinite;
+}
+section{
+	width: 1000px;
+	height: 180px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -70%);
+}
+section .sky{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+section .sky .sun{
+	position:absolute;
+	top: -370px;
+	left: 50%;
+	margin-left: -100px;
+	transform-origin: center 500px;
+	animation: sun linear 19.5s infinite;
+}
+section .sky .cloud1{
+	position: absolute;
+	top: -250px;
+	left: 10%;
+	animation: flow2 linear 20s infinite;
+}
+section .sky .cloud2{
+	position: absolute;
+	top: -200px;
+	left: 0%;
+	animation: flow2 linear 20s infinite;
+}
+section .sky .star{
+	position: absolute;
+	top: -370px;
+	left: 5%;
+	animation: star linear 20s infinite;
+	}
+section .town .circle{
+	position: absolute;
+	bottom:104px;
+	left: 50%;
+	margin-left: -165px;
+	opacity: 0.7;
+	animation: rotation linear 15s infinite;
+}
+section .town .night{
+	position: absolute;
+	bottom: 0px;
+	left: 40px;
+}
+section .town .day{
+	position: absolute;
+	bottom: 0px;
+	left: 40px;
+	animation: day linear 20s infinite;
+}
+section .town .shadow{
+	position: absolute;
+	bottom: -270px;
+	left: 40px;
+	perspective: 500px;
+	transform: rotate(180deg);
+	animation: shadowMove linear 19.5s infinite;
+}
+section .people{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0px;
+	left:0px;
+	animation: day linear 20s infinite;
+}
+section .people .man{
+	position: absolute;
+	left: 0%;
+	bottom: 0px;
+	animation: flow linear 11s infinite;
+}
+section .people .family{
+	position: absolute;
+	left: 0%;
+	bottom: 0px;
+	animation: flow linear 17s infinite;
+}
+/* 놀이기구 회전 */
+@keyframes rotation{
+	0%{transform:rotate(0deg);}
+	100%{transform:rotate(360deg);}
+}
+/* 배경 하늘색을 변경하는 키프레임 */
+@keyframes sky{
+	0%{background-color: #594b68;}
+	25%{background-color: #0b9cdf9c;}
+	45%{background-color: #0b9cdf9c;}
+	60%{background-color: #ad102a7a;}
+	65%{background-color: #661220af;}
+	75%{background-color: #272531;}
+	90%{background-color: #272531;}
+	100%{background-color: #594b68;}
+}
+/* 태양이 회전하는 키 프레임 */
+@keyframes sun{
+	0%{opacity: 0; transform: rotate(-90deg);}
+	25%{opacity: 1; transform: rotate(-30deg);}
+	50%{opacity: 1; transform: rotate(30deg);}
+	75%{opacity: 0; transform: rotate(90deg);}
+	100%{opacity: 0; transform: rotate(-90deg);}
+}
+/* 시간에 따른 그림자 변형 */
+@keyframes shadowMove{
+	
+	0%{opacity: 0.6; transform: rotate(180deg) skew(0deg);} 
+	25%{opacity: 0.1; transform: translateX(75px) rotate(180deg) skew(30deg);}
+	60%{opacity: 0.03; transform: rotate(180deg) skew(0deg);}
+	75%{opacity: 0.1; transform: rotate(180deg) skew(0deg);}
+	100%{opacity: 0.6; transform: rotate(180deg) skew(0deg);}
+}
+/* 별이 생기는 키 프레임 */
+@keyframes star{
+	0%{opacity: 0;}
+	25%{opacity: 0;}
+	65%{opacity: 0;}
+	80%{opacity: 1;}
+	100%{opacity: 0;}
+}
+/* 밤에 특정 요소를 숨기는 키프레임 */
+@keyframes day{
+	0%{opacity: 0;}
+	25%{opacity: 1;}
+	50%{opacity: 1;}
+	75%{opacity: 0;}
+	100%{opacity: 0;}
+}
+/* 사람을 오른쪽으로 이동시키는 키프레임 */
+@keyframes flow{
+	0%{left: 0%; opacity: 0;}
+	15%{opacity: 1;}
+	85%{opacity: 1;}
+	100%{left: 90%; opacity: 0;}
+}
+/* 구름을 오른쪽으로 이동시키는 키프레임 */
+@keyframes flow2{
+	0%{left: 0%; opacity: 0%;}
+	25%{opacity: 0.7;}
+	40%{opacity: 0.7;}
+	60%{opacity:0;}
+	100%{left: 90%; opacity: 0;}
+}
