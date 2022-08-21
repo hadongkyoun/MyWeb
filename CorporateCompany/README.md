@@ -1,1 +1,1 @@
-<img src="img/corporate.mp4">
+<img src="/img/corporate.gif"/>
