@@ -1,8 +1,7 @@
 # This page is Loading page
 ----
 ## Town_Day & Night
-<img src="img/town1.png" width="300"/>
-<img src="img/town2.png" width="296"/>
+<img src="img/town1.png" width="400"/><img src="img/town2.png" width="400"/>
 
 ---
 ## Town_Video
